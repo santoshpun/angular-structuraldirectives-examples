@@ -1,0 +1,43 @@
+<p *ngIf="isVisible">This block is shown when "isVisible" tag is true</p>
+
+  <p [hidden]="!isVisible">
+    Show this only if "isVisible" is true
+  </p>
+
+  <div class="card" style="width: 18rem;" *ngIf="user">
+    <div class="card-body">
+      <button type="button" class="btn btn-primary">
+        User ID <span class="badge badge-light">{{user.id}}</span>
+      </button>
+      <h5 class="card-title">{{user.name}}</h5>
+      <p class="card-text">{{user.country}}</p>
+    </div>
+  </div>
+
+
+  <div *ngIf="user.id === 1; else notFoundBlock">
+    <p>
+      Show this only if user id is 1
+    </p>
+  </div>
+
+  <ng-template #notFoundBlock>
+    <p>
+      User id is not 1
+    </p>
+  </ng-template>
+
+  <ng-template *ngIf="show;then showBlock; else notShowBlock">
+  </ng-template>
+
+  <ng-template #showBlock>
+    <p>
+      Show this only if "show" is true
+    </p>
+  </ng-template>
+
+  <ng-template #notShowBlock>
+    <p>
+      Show this only if "show" is not true
+    </p>
+  </ng-template>

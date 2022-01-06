@@ -3,10 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { NgifexampleComponent } from './ngifexample/ngifexample.component';
+import { NgforexampleComponent } from './ngforexample/ngforexample.component';
+import { NgswitchexampleComponent } from './ngswitchexample/ngswitchexample.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NgifexampleComponent,
+    NgforexampleComponent,
+    NgswitchexampleComponent
   ],
   imports: [
     BrowserModule,
